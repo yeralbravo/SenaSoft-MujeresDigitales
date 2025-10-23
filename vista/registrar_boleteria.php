@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 77743fd8e293407eb2c967ab9e351ce092dc4c7e
 <head>
     <meta charset="UTF-8">
     <title>Registrar Boletería</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+<<<<<<< HEAD
 
 <body>
     <header>
         <h1>Ticketify</h1>
+=======
+<body>
+    <header>
+        <h1>🎟️ Ticketify</h1>
+>>>>>>> 77743fd8e293407eb2c967ab9e351ce092dc4c7e
         <nav>
             <ul>
                 <li><a href="registrar_evento.php">Inicio</a></li>
@@ -18,6 +27,7 @@
                 <li><a href="registrar_localidad.php">Localidades</a></li>
                 <li><a href="registrar_boleteria.php">Boletería</a></li>
                 <li><a href="consultar_eventos.php">Consultar</a></li>
+<<<<<<< HEAD
                 <li><a href="crud.php">Editar y Eliminar</a></li>
                 <li><a href="index.php">Cerrar Sesión</a></li>
             </ul>
@@ -73,6 +83,19 @@
             <option value="general">General</option>
             <option value="preferencial">Preferencial</option>
         </select><br>
+=======
+            </ul>
+        </nav>
+    </header>
+    <h2>Registrar Boletería</h2>
+
+    <form action="../controladores/boleteria.php" method="POST">
+        <label>ID del Evento:</label>
+        <input type="number" name="event_id" required><br>
+
+        <label>ID de la Localidad:</label>
+        <input type="number" name="localidad_id" required><br>
+>>>>>>> 77743fd8e293407eb2c967ab9e351ce092dc4c7e
 
         <label>Precio de la Boleta:</label>
         <input type="number" name="precio" step="0.01" required><br>
@@ -86,6 +109,7 @@
     <?php if (isset($_GET['message'])) { ?>
         <div class="alert">
             <?php
+<<<<<<< HEAD
             switch ($_GET['message']) {
                 case 'ok':
                     echo 'Boletería registrada correctamente.';
@@ -97,9 +121,27 @@
                     echo 'Algo salió mal.';
                     break;
             }
+=======
+                switch ($_GET['message']) {
+                    case 'ok':
+                        echo 'Boletería registrada correctamente 🎟️';
+                        break;
+                    case 'error':
+                        echo 'Error al registrar la boletería ❌';
+                        break;
+                    default:
+                        echo 'Algo salió mal.';
+                        break;
+                }
+>>>>>>> 77743fd8e293407eb2c967ab9e351ce092dc4c7e
             ?>
         </div>
     <?php } ?>
 </body>
+<<<<<<< HEAD
 
 </html>
+=======
+</html>
+
+>>>>>>> 77743fd8e293407eb2c967ab9e351ce092dc4c7e

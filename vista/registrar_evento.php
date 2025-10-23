@@ -11,7 +11,11 @@
 
 <body class="bg-dark d-flex align-items-center justify-content-center vh-100">
     <header>
+<<<<<<< HEAD
         <h1>Ticketify</h1>
+=======
+        <h1>🎟️ Ticketify</h1>
+>>>>>>> 77743fd8e293407eb2c967ab9e351ce092dc4c7e
         <nav>
             <ul>
                 <li><a href="registrar_evento.php">Inicio</a></li>
@@ -20,8 +24,11 @@
                 <li><a href="registrar_localidad.php">Localidades</a></li>
                 <li><a href="registrar_boleteria.php">Boletería</a></li>
                 <li><a href="consultar_eventos.php">Consultar</a></li>
+<<<<<<< HEAD
                 <li><a href="crud.php">Editar y Eliminar</a></li>
                 <li><a href="../index.php">Cerrar Sesión </a></li>
+=======
+>>>>>>> 77743fd8e293407eb2c967ab9e351ce092dc4c7e
             </ul>
         </nav>
     </header>
@@ -29,6 +36,7 @@
     <div class="login-box p-5 shadow rounded bg-secondary" style="width:420px;">
         <h2 class="text-center text-white mb-4">Registrar Evento</h2>
 
+<<<<<<< HEAD
         <?php
         // Conexión
         $conexion = new mysqli("localhost", "root", "", "festivales");
@@ -36,6 +44,15 @@
         ?>
 
         <form action="../controladores/evento.php" method="POST" enctype="multipart/form-data">
+=======
+        <?php if (isset($_GET['mensaje'])): ?>
+            <div class="alert alert-success text-center"><?= htmlspecialchars($_GET['mensaje']) ?></div>
+        <?php elseif (isset($_GET['error'])): ?>
+            <div class="alert alert-danger text-center"><?= htmlspecialchars($_GET['error']) ?></div>
+        <?php endif; ?>
+
+        <form action="../controladores/evento.php" method="POST">
+>>>>>>> 77743fd8e293407eb2c967ab9e351ce092dc4c7e
             <div class="mb-3">
                 <label class="text-white">Nombre:</label>
                 <input type="text" name="nombre" class="form-control" required>
@@ -47,6 +64,7 @@
             </div>
 
             <div class="mb-3">
+<<<<<<< HEAD
                 <label class="text-white">Municipio:</label>
                 <select name="municipio_id" class="form-select" required>
                     <option value="">Seleccione un municipio</option>
@@ -54,6 +72,10 @@
                         <option value="<?php echo $fila['id']; ?>"><?php echo htmlspecialchars($fila['nombre']); ?></option>
                     <?php endwhile; ?>
                 </select>
+=======
+                <label class="text-white">Municipio ID:</label>
+                <input type="number" name="municipio_id" class="form-control" required>
+>>>>>>> 77743fd8e293407eb2c967ab9e351ce092dc4c7e
             </div>
 
             <div class="mb-3">
@@ -66,6 +88,7 @@
                 <input type="datetime-local" name="fecha_fin" class="form-control" required>
             </div>
 
+<<<<<<< HEAD
             <div class="mb-3">
                 <label class="text-white">Foto del evento:</label>
                 <input type="file" name="foto" class="form-control" accept="image/*">
@@ -97,3 +120,15 @@
     </div>
 </body>
 </html>
+=======
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary" type="submit">Registrar</button>
+                <a href="consultar_eventos.php" class="btn btn-outline-light">Ver Eventos</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+>>>>>>> 77743fd8e293407eb2c967ab9e351ce092dc4c7e

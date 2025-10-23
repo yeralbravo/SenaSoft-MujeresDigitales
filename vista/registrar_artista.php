@@ -7,7 +7,11 @@
 </head>
 <body>
     <header>
+<<<<<<< HEAD
         <h1>Ticketify</h1>
+=======
+        <h1>🎟️ Ticketify</h1>
+>>>>>>> 77743fd8e293407eb2c967ab9e351ce092dc4c7e
         <nav>
             <ul>
                 <li><a href="registrar_evento.php">Inicio</a></li>
@@ -16,8 +20,11 @@
                 <li><a href="registrar_localidad.php">Localidades</a></li>
                 <li><a href="registrar_boleteria.php">Boletería</a></li>
                 <li><a href="consultar_eventos.php">Consultar</a></li>
+<<<<<<< HEAD
                 <li><a href="crud.php">Editar y Eliminar</a></li>
                 <li><a href="index.php">Cerrar Sesion </a></li>
+=======
+>>>>>>> 77743fd8e293407eb2c967ab9e351ce092dc4c7e
             </ul>
         </nav>
     </header>
@@ -41,7 +48,11 @@
     <?php if (isset($_GET['message'])) { ?>
         <div class="alert">
             <?php
+<<<<<<< HEAD
                 echo $_GET['message'] === 'ok' ? 'Artista registrado correctamente ' : 'Error al registrar artista ';
+=======
+                echo $_GET['message'] === 'ok' ? 'Artista registrado correctamente 🎤' : 'Error al registrar artista ❌';
+>>>>>>> 77743fd8e293407eb2c967ab9e351ce092dc4c7e
             ?>
         </div>
     <?php } ?>

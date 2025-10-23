@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 require_once "../config/conexion.php";
 
 if (isset($_POST['registrar'])) {
@@ -61,11 +62,30 @@ if (isset($_POST['registrar'])) {
             $insert_relation->close();
         }
 
+=======
+require_once "../conexion.php";
+
+if (isset($_POST['registrar'])) {
+    $event_id = $_POST['event_id'];
+    $localidad_id = $_POST['localidad_id'];
+    $precio = $_POST['precio'];
+    $cantidad = $_POST['cantidad'];
+
+    $sql = "INSERT INTO tickets (event_id, localidad_id, precio, cantidad)
+            VALUES (?, ?, ?, ?)";
+    $stmt = $conexion->prepare($sql);
+    $stmt->bind_param("iidi", $event_id, $localidad_id, $precio, $cantidad);
+
+    if ($stmt->execute()) {
+>>>>>>> 77743fd8e293407eb2c967ab9e351ce092dc4c7e
         header("Location: ../vista/registrar_boleteria.php?message=ok");
     } else {
         header("Location: ../vista/registrar_boleteria.php?message=error");
     }
+<<<<<<< HEAD
     $stmt->close();
+=======
+>>>>>>> 77743fd8e293407eb2c967ab9e351ce092dc4c7e
     exit();
 }
 ?>

@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 require_once "../config/conexion.php";
+=======
+require_once "../conexion.php";
+>>>>>>> 77743fd8e293407eb2c967ab9e351ce092dc4c7e
 
 if (isset($_POST['registrar'])) {
     $nombres = $_POST['nombres'];

@@ -1,4 +1,11 @@
 <?php
+<<<<<<< HEAD
+=======
+require_once "../conexion.php";
+
+$mensaje = "";
+
+>>>>>>> 77743fd8e293407eb2c967ab9e351ce092dc4c7e
 if (isset($_POST['registrar'])) {
     $nombre = $_POST['nombre'];
     $descripcion = $_POST['descripcion'];
@@ -6,6 +13,7 @@ if (isset($_POST['registrar'])) {
     $fecha_inicio = $_POST['fecha_inicio'];
     $fecha_fin = $_POST['fecha_fin'];
 
+<<<<<<< HEAD
     // Conexión a la base de datos
     $conexion = new mysqli("localhost", "root", "", "festivales");
     if ($conexion->connect_error) {
@@ -38,5 +46,23 @@ if (isset($_POST['registrar'])) {
     }
 
     $conexion->close();
+=======
+    $sql = "INSERT INTO events (nombre, descripcion, municipio_id, fecha_inicio, fecha_fin)
+            VALUES (?, ?, ?, ?, ?)";
+    $stmt = $conexion->prepare($sql);
+
+    if ($stmt) {
+        $stmt->bind_param("ssiss", $nombre, $descripcion, $municipio_id, $fecha_inicio, $fecha_fin);
+
+        if ($stmt->execute()) {
+            $mensaje = "ok";
+        } else {
+            $mensaje = "error";
+        }
+        $stmt->close();
+    } else {
+        $mensaje = "error";
+    }
+>>>>>>> 77743fd8e293407eb2c967ab9e351ce092dc4c7e
 }
 ?>
