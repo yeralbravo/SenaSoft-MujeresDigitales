@@ -1,0 +1,462 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Lora', serif;
+}
+
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #FFFFFF;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-image {
+    width: 30px;
+    height: 30px;
+}
+
+.brand-name {
+    color: #2a37af;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navigation-menu a {
+    margin-left: 1rem;
+
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navigation-menu .login-action{
+    color: #000000;
+}
+
+.navigation-menu .register-action{
+    color: #FFFFFF;
+}
+
+
+
+/* Hero Section */
+.hero-banner {
+    position: relative;
+    height: 700px;
+    background: url('../css/Tomorrowland-medellin-2025_v2.webp') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    color: #FFFFFF;
+}
+
+.banner-content {
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    z-index: 1;
+}
+
+.banner-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.banner-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #FFFFFF;
+    opacity: 0.9;
+}
+
+.banner-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.banner-actions .action-button {
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid black; 
+}
+
+.login-action {
+    background-color: #FFFFFF;
+
+    /* border: 1px solid black; */
+}
+
+.login-action:hover {
+    background-color: #e0e0e0;
+    /* Color específico de hover */
+}
+
+.register-action {
+    background-color: #2a37af;
+}
+
+.register-action:hover {
+    background-color: #3342c5;
+}
+
+
+/* Contenido Principal y Secciones*/
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+/* Sección de filtro */
+.filter-section {
+    padding: 25px;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.filter-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #495057;
+    font-size: 1.5em;
+}
+
+.filter-section form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.filter-section div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.filter-section label {
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #495057;
+}
+
+.filter-section input,
+.filter-section select,
+.filter-section button {
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    font-size: 1em;
+}
+
+.filter-section input:focus,
+.filter-section select:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}
+
+.filter-section input[type="text"],
+.filter-section select {
+    min-width: 180px;
+}
+
+.filter-section button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease;
+    height: 42px;
+}
+
+.filter-section button:hover {
+    background-color: #0056b3;
+}
+
+/*Sección Lista de Eventos */
+.event-list-section h2 {
+    margin-bottom: 25px;
+    color: #343a40;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+/* Contenedor de tarjetas */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+/* Enlace/Tarjeta */
+.event-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(33.333% - 25px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #fff;
+}
+
+.event-card-link:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Contenido tarjeta */
+.event-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.event-card-content {
+    padding: 20px;
+}
+
+.event-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.3em;
+    color: #212529;
+}
+
+.event-card p {
+    font-size: 0.95em;
+    color: #6c757d;
+    margin-bottom: 6px;
+}
+
+@media (max-width: 992px) {
+    .event-card-link {
+        width: calc(50% - 25px);
+    }
+}
+
+@media (max-width: 768px) {
+    .filter-section form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-section button {
+        height: auto;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .event-card-link {
+        width: calc(100% - 20px);
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .filter-section div {
+        width: 100%;
+    }
+
+    .filter-section input,
+    .filter-section select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/*  Footer*/
+footer {
+    background-color: #343a40;
+    color: #adb5bd;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* detalles desplegables */
+
+/* Contenedor para la tarjeta y sus detalles */
+.event-card-wrapper {
+    width: calc(33.333% - 25px);
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 992px) {
+    .event-card-wrapper {
+        width: calc(50% - 25px);
+    }
+}
+
+@media (max-width: 576px) {
+    .event-card-wrapper {
+        width: calc(100% - 20px);
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
+.event-toggle-checkbox {
+    display: none;
+}
+
+
+.event-card {
+    display: block;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+    margin-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Contenido de la tarjeta */
+.event-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.event-card-content {
+    padding: 20px;
+}
+
+.event-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.3em;
+    color: #212529;
+}
+
+.event-card p {
+    font-size: 0.95em;
+    color: #6c757d;
+    margin-bottom: 6px;
+}
+
+.details-prompt {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.85em;
+    color: #007bff;
+    text-align: right;
+    font-weight: bold;
+}
+
+
+/* Contenido de los detalles*/
+.event-details-content {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-top: none;
+    padding: 0 20px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    max-height: 0;
+    overflow: hidden;
+    /* Esconde el contenido que se sale */
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05) inset;
+}
+
+.event-details-content h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #495057;
+}
+
+.event-details-content p {
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.event-details-content strong {
+    color: #212529;
+}
+
+.buy-button {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    transition: background-color 0.2s ease;
+}
+
+.buy-button:hover {
+    background-color: #1e7e34;
+}
+
+
+.event-toggle-checkbox:checked+.event-card {
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.event-toggle-checkbox:checked+.event-card .details-prompt {
+    display: none;
+}
+
+
+.event-toggle-checkbox:checked+.event-card+.event-details-content {
+    max-height: 1000px;
+    padding: 1px 20px 1px 20px;
+    transition: max-height 0.5s ease-in, padding 0.5s ease-in;
+}
